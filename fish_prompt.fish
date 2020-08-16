@@ -349,11 +349,6 @@ function __bobthefish_start_segment -S -d 'Start a prompt segment'
     end
 
     set __bobthefish_current_bg $bg
-
-    # New line before prompt (after output)
-    if set -q theme_newline_prefix
-        echo
-    end
 end
 
 function __bobthefish_path_segment -S -a segment_dir -d 'Display a shortened form of a directory'
@@ -1062,6 +1057,11 @@ function fish_prompt -d 'bobthefish, a fish theme optimized for awesome'
 
     # Start each line with a blank slate
     set -l __bobthefish_current_bg
+
+    # New line before prompt (after output)
+    if set -q theme_newline_prefix
+        echo
+    end
 
     # Status flags and input mode
     __bobthefish_prompt_status $last_status
