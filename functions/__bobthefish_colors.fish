@@ -11,8 +11,8 @@ function __bobthefish_colors -S -a color_scheme -d 'Define colors used by bobthe
       set -x color_initial_segment_su       white green --bold
       set -x color_initial_segment_jobs     white blue --bold
 
-      set -x color_path                     black white
-      set -x color_path_basename            black white --bold
+      set -x color_path                     white black
+      set -x color_path_basename            white black --bold
       set -x color_path_nowrite             magenta $colorfg
       set -x color_path_nowrite_basename    magenta $colorfg --bold
 
@@ -27,8 +27,8 @@ function __bobthefish_colors -S -a color_scheme -d 'Define colors used by bobthe
 
       set -x color_vagrant                  brcyan $colorfg
       set -x color_k8s                      magenta white --bold
-      set -x color_username                 white black --bold
-      set -x color_hostname                 white black
+      set -x color_username                 black white
+      set -x color_hostname                 black white
       set -x color_rvm                      brmagenta $colorfg --bold
       set -x color_nvm                      brgreen $colorfg --bold
       set -x color_virtualfish              brblue $colorfg --bold
