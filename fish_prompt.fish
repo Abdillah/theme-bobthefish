@@ -349,6 +349,11 @@ function __bobthefish_start_segment -S -d 'Start a prompt segment'
     end
 
     set __bobthefish_current_bg $bg
+
+    # New line before prompt (after output)
+    if set -q theme_newline_prefix
+        echo
+    end
 end
 
 function __bobthefish_path_segment -S -a segment_dir -d 'Display a shortened form of a directory'
@@ -1034,7 +1039,6 @@ end
 function __bobthefish_prompt_dir -S -a real_pwd -d 'Display a shortened form of the current directory'
     __bobthefish_path_segment "$real_pwd"
 end
-
 
 # ==============================
 # Apply theme
